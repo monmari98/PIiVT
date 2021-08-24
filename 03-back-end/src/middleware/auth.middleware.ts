@@ -53,8 +53,6 @@ export default class AuthMiddleware {
             return res.status(403).send("Access denied to this role");
         }
 
-        req.authorized = data;
-
         next();
     }
 

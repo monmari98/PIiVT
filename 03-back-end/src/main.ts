@@ -11,6 +11,7 @@ import PatientSecvice from './components/patient/service';
 import PatientRouter from './components/patient/router';
 import MedicalRecordSecvice from './components/medical-record/service';
 import MedicalRecordRouter from './components/medical-record/router';
+import AuthRouter from './components/auth/router';
 
 async function main() {
     const application: express.Application = express();
@@ -64,6 +65,7 @@ async function main() {
     }));
 
     Router.setupRoutes(application, resouces, [
+        new AuthRouter(),
         new AdministratorRouter(),
         new PatientRouter(),
         new MedicalRecordRouter(),

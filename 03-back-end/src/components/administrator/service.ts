@@ -29,6 +29,31 @@ class AdministratorSecvice extends BaseService<AdministratorModel> {
         return await this.getByIdFromTable("administrator", administratorId);
     }
 
+    public async setLog(fieldName: string, fieldValue: string, administratorId = null) {
+        const logValue = "Unknown " + fieldName + ": " + fieldValue;
+        await this.db.execute(
+            `
+                INSERT 
+                    login_log
+                SET
+                    log = ?,
+                    administrator_id = ?
+            `, 
+            [logValue, administratorId]
+        );
+    }
+
+    public async getByUsername(username: string): Promise<AdministratorModel|null> {
+        const administrator =  await this.getAllByFieldName("administrator", "username", username);
+
+        if (!Array.isArray(administrator) || administrator.length === 0) {
+            await this.setLog("username", username);
+            return null;
+        }
+
+        return administrator[0];
+    }
+
     public async add(data: IAddAdministrator): Promise<AdministratorModel|IErrorResponse> {
         return new Promise<AdministratorModel|IErrorResponse>(async resolve => {
             const passwordHash = bcrypt.hashSync(data.password, 11)
@@ -36,8 +61,9 @@ class AdministratorSecvice extends BaseService<AdministratorModel> {
             const sql: string = `
                                 INSERT 
                                     administrator 
-                                SET username = ?, 
-                                password_hash = ?;
+                                SET 
+                                    username = ?, 
+                                    password_hash = ?;
                                 `
             this.db.execute(sql, [data.username, passwordHash])
                 .then(async res => {
