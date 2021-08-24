@@ -1,0 +1,44 @@
+{
+  "name": "piivt-api",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "start": "npm run build && node --trace-warnings ./dist/main.js",
+    "start:dev": "ts-node-dev --trace-warnings --respawn -- src/main.ts"
+  },
+  "author": "Marko Milenkovic <marko.milenkovic.17@singimail.rs>",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.6.2",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "image-size": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.6.3",
+    "sharp": "^0.28.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/express-fileupload": "^1.1.7",
+    "@types/image-size": "^0.8.0",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/node": "^16.4.8",
+    "@types/nodemailer": "^6.4.4",
+    "@types/sharp": "^0.28.5",
+    "eslint": "^7.32.0",
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^1.1.8",
+    "tsc": "^2.0.3",
+    "typescript": "^4.3.5"
+  }
+}
