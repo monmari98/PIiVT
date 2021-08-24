@@ -17,10 +17,11 @@ export default class AuthController extends BaseController {
 
         const administrator = await this.services.administratorService.getByUsername(data.username);
         if (administrator === null) return res.sendStatus(404);
+        console.log(administrator)
 
         if (!bcrypt.compareSync(data.password, administrator.passwordHash)) {
             await new Promise(resolve => setTimeout(resolve, 1000));
-            await this.services.administratorService.setLog("password", data.password, data.administratorId);
+            await this.services.administratorService.setLog("password", data.password, administrator.administratorId);
             return res.status(403).send("Invalid administrator password.");
         }
 

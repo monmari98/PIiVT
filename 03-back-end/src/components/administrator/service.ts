@@ -2,9 +2,10 @@ import BaseService from "../../common/BaseService";
 import IErrorResponse from "../../common/IErrorResponse.interface";
 import IModelAdapterOptions from "../../common/IModelAdapterOptions.interface";
 import { IAddAdministrator } from "./dto/IAddAdministrator";
-import AdministratorModel from "./model";
+import AdministratorModel, { LoginLogModel } from "./model";
 import * as bcrypt from "bcrypt";
 import { IEditAdministrator } from "./dto/IEditAdministrator";
+import { resolve } from "path/posix";
 
 class AdministratorModelAdapterOptions implements IModelAdapterOptions {
 
@@ -29,9 +30,9 @@ class AdministratorSecvice extends BaseService<AdministratorModel> {
         return await this.getByIdFromTable("administrator", administratorId);
     }
 
-    public async setLog(fieldName: string, fieldValue: string, administratorId = null) {
+    public setLog(fieldName: string, fieldValue: string, administratorId: number|null = null) {
         const logValue = "Unknown " + fieldName + ": " + fieldValue;
-        await this.db.execute(
+        this.db.execute(
             `
                 INSERT 
                     login_log
@@ -40,7 +41,67 @@ class AdministratorSecvice extends BaseService<AdministratorModel> {
                     administrator_id = ?
             `, 
             [logValue, administratorId]
-        );
+        )
+        
+    }
+
+    public async getAllLogs(): Promise<LoginLogModel[]|IErrorResponse> {
+        return new Promise<LoginLogModel[]|IErrorResponse>(async resolve => {
+            await this.db.execute(
+                `
+                    SELECT 
+                        *
+                    FROM
+                        login_log;
+                `, 
+                []
+            )
+            .then(async ([rows, columns]) => {
+                const list: LoginLogModel[] = [];
+                if (Array.isArray(rows)) {
+                    for (const row of rows) {
+                        list.push(row as LoginLogModel)
+                    }
+                }
+                resolve(list);
+            })
+            .catch(error => {
+                resolve({
+                    errorCode: error?.errno,
+                    errorMessage: error?.sqlMessage
+                })
+            });
+        })
+    }
+    public async getLogsByAdministratorId(administratorId: number): Promise<LoginLogModel[]|IErrorResponse> {
+        return new Promise<LoginLogModel[]|IErrorResponse>(async resolve => {
+            await this.db.execute(
+                `
+                    SELECT 
+                        *
+                    FROM
+                        login_log
+                    WHERE
+                        administrator_id = ?;
+                `, 
+                [administratorId]
+            )
+            .then(async ([rows, columns]) => {
+                const list: LoginLogModel[] = [];
+                if (Array.isArray(rows)) {
+                    for (const row of rows) {
+                        list.push(row as LoginLogModel)
+                    }
+                }
+                resolve(list);
+            })
+            .catch(error => {
+                resolve({
+                    errorCode: error?.errno,
+                    errorMessage: error?.sqlMessage
+                })
+            });
+        })
     }
 
     public async getByUsername(username: string): Promise<AdministratorModel|null> {

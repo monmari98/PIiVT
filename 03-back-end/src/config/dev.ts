@@ -65,11 +65,11 @@ const Config: IConfig = {
     },
     mail: {
         hostname: process.env?.MAIL_HOST,
-        port: +(process.env?.MAIL_PORT),
-        secure: process.env?.MAIL_SECURE === "true" ,
         username: process.env?.MAIL_USERNAME,
         password: process.env?.MAIL_PASSWORD,
         fromEmail: process.env?.MAIL_FROM,
+        port: +(process.env?.MAIL_PORT),
+        secure: process.env?.MAIL_SECURE === "true" ,
         debug: process.env?.MAIL_DEBUG === "true",
     },
     auth: {
@@ -77,7 +77,7 @@ const Config: IConfig = {
             algorithm: "RS256",
             issuer: "localhost",
             auth: {
-                duration: 60 * 60 * 24 * 7, //60 * 30,
+                duration: 60 * 60 * 24 * 7,
                 public: readFileSync("keystore/administrator-auth.public", "utf-8"),
                 private: readFileSync("keystore/administrator-auth.private", "utf-8"),
             },

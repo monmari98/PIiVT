@@ -1,5 +1,12 @@
 import IModel from "../../common/IModel.interface";
 
+class LoginLogModel implements IModel {
+    loginLogId: number;
+    log: string;
+    admnistratorId: string | null;
+    createdAt: Date
+}
+
 class AdministratorModel implements IModel {
     administratorId: number;
     username: string;
@@ -7,3 +14,4 @@ class AdministratorModel implements IModel {
 }
 
 export default AdministratorModel;
+export {LoginLogModel};

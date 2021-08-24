@@ -79,6 +79,13 @@ class AdministratorController extends BaseController {
 
         res.send(await this.services.administratorService.delete(id));
     }
+
+    public async getAllLogs(req: Request, res: Response, next: NextFunction) {
+        res.send(await this.services.administratorService.getAllLogs());
+    }
+    public async getLogsByAdministratorId(req: Request, res: Response, next: NextFunction) {
+        res.send(await this.services.administratorService.getLogsByAdministratorId(+(req.params.aid)));
+    }
 }
 
 export default AdministratorController

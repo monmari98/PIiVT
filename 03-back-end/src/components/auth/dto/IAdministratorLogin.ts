@@ -11,6 +11,9 @@ const ajv = new Ajv();
 const IAdministratorLoginValidator = ajv.compile({
     type: "object",
     properties: {
+        administratorId: {
+            type: "number"
+        },
         username: {
             type: "string",
             minLength: 2,
