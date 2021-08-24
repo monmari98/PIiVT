@@ -1,32 +1,19 @@
 import * as express from 'express';
 import * as cors from 'cors';
 import Config from './config/dev';
-import CategoryRouter from './components/category/router';
 import * as mysql2 from "mysql2/promise";
 import IApplicationResources from './common/IApplicationResources.interface';
 import Router from './router';
-import ManufacturerRouter from './components/manufacturer/router';
-import CategoryService from './components/category/service';
-import ManufacturerService from './components/manufacturer/service';
 import AdministratorSecvice from './components/administrator/service';
 import AdministratorRouter from './components/administrator/router';
-import ProfileService from './components/profile/service';
-import ProfileRouter from './components/profile/routes';
 import * as fileUpload from 'express-fileupload';
-import UserService from './components/user/service';
-import UserRouter from './components/user/router';
-import AuthRouter from './components/auth/router';
-import CartService from './components/cart/service';
-import CartRouter from './components/cart/router';
 
 async function main() {
     const application: express.Application = express();
 
     application.use(cors());
     application.use(express.json());
-    // application.use(express.urlencoded({
-    //     extended: false
-    // })); 
+    
     application.use(fileUpload({
         limits: {
             fileSize: Config.fileUpload.maxSize,
@@ -59,12 +46,7 @@ async function main() {
     resouces.databaseConnection.connect();
 
     resouces.services = {
-        categoryService: new CategoryService(resouces),
-        manufacturerService: new ManufacturerService(resouces),
         administratorService: new AdministratorSecvice(resouces), 
-        profileServices: new ProfileService(resouces),
-        userService: new UserService(resouces),
-        cartService: new CartService(resouces),
     }
 
     application.use(Config.server.static.route, express.static(Config.server.static.path, {
@@ -76,13 +58,7 @@ async function main() {
     }));
 
     Router.setupRoutes(application, resouces, [
-        new CategoryRouter(),
-        new ManufacturerRouter(),
         new AdministratorRouter(),
-        new ProfileRouter(),
-        new UserRouter(),
-        new AuthRouter(),
-        new CartRouter(),
     ]);
 
     application.use((req, res) => {
