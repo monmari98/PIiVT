@@ -39,11 +39,11 @@ class PatientSecvice extends BaseService<PatientModel> {
                                 INSERT 
                                     patient 
                                 SET 
-                                first_name = ?, 
-                                last_name = ?,
-                                jmbg = ?,
-                                email = ?,
-                                age = ?;
+                                    first_name = ?, 
+                                    last_name = ?,
+                                    jmbg = ?,
+                                    email = ?,
+                                    age = ?;
                                 `
             this.db.execute(sql, [
                 data.firstName,

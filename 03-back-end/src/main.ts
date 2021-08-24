@@ -9,6 +9,8 @@ import AdministratorRouter from './components/administrator/router';
 import * as fileUpload from 'express-fileupload';
 import PatientSecvice from './components/patient/service';
 import PatientRouter from './components/patient/router';
+import MedicalRecordSecvice from './components/medical-record/service';
+import MedicalRecordRouter from './components/medical-record/router';
 
 async function main() {
     const application: express.Application = express();
@@ -50,6 +52,7 @@ async function main() {
     resouces.services = {
         administratorService: new AdministratorSecvice(resouces), 
         patientService: new PatientSecvice(resouces),
+        medicalRecordService: new MedicalRecordSecvice(resouces),
     }
 
     application.use(Config.server.static.route, express.static(Config.server.static.path, {
@@ -63,6 +66,7 @@ async function main() {
     Router.setupRoutes(application, resouces, [
         new AdministratorRouter(),
         new PatientRouter(),
+        new MedicalRecordRouter(),
     ]);
 
     application.use((req, res) => {

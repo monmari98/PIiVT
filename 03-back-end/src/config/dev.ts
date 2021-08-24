@@ -73,20 +73,6 @@ const Config: IConfig = {
         debug: process.env?.MAIL_DEBUG === "true",
     },
     auth: {
-        user: {
-            algorithm: "RS256",
-            issuer: "localhost",
-            auth: {
-                duration: 60 * 60 * 24 * 7, //60 * 20,
-                public: readFileSync("keystore/user-auth.public", "utf-8"),
-                private: readFileSync("keystore/user-auth.private", "utf-8"),
-            },
-            refresh: {
-                duration: 60 * 60 * 24 * 365, 
-                public: readFileSync("keystore/user-refresh.public", "utf-8"),
-                private: readFileSync("keystore/user-refresh.private", "utf-8"),
-            },
-        },
         administrator: {
             algorithm: "RS256",
             issuer: "localhost",

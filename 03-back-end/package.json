@@ -9,7 +9,7 @@
         "start": "npm run build && node --trace-warnings ./dist/main.js",
         "start:dev": "ts-node-dev --trace-warnings --respawn -- src/main.ts"
     },
-    "author": "Marko Milenkovic <marko.milenkovic.17@singimail.rs>",
+    "author": "Marija Simic <marija.simic.17@singimail.rs>",
     "license": "ISC",
     "dependencies": {
         "ajv": "^8.6.2",
