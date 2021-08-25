@@ -31,7 +31,7 @@ class ServiceSecvice extends BaseService<ServiceModel> {
         return item;
     }
 
-    private async getCategory(ServiceId: number): Promise<CategoryModel|IErrorResponse|null> {
+    public async getCategory(ServiceId: number): Promise<CategoryModel|IErrorResponse|null> {
         const sql = `
                     SELECT 
                         * 

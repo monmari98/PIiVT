@@ -36,6 +36,12 @@ class MedicalRecordSecvice extends BaseService<MedicalRecordModel> {
         ): Promise<MedicalRecordModel|null|IErrorResponse> {
         return await this.getByIdFromTable("medical_record", medicalRecordId, options);
     }
+    public async getAllByPatientId(
+            patientId: number, 
+            options: Partial<MedicalRecordModelAdapterOptions> = {loadMedicalRecord: true}
+        ): Promise<MedicalRecordModel[]|null|IErrorResponse> {
+        return await this.getAllByFieldName("medical_record", "patient_id", patientId, options);
+    }
 
     public async add(data: IAddMedicalRecord): Promise<MedicalRecordModel|IErrorResponse> {
         return new Promise<MedicalRecordModel|IErrorResponse>(async resolve => {
