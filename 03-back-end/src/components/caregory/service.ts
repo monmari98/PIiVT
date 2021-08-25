@@ -27,7 +27,7 @@ class CategorySecvice extends BaseService<CategoryModel> {
         return item;
     }
 
-    private async getPrice(categoryId: number): Promise<PriceNameModel[]|IErrorResponse> {
+    public async getPrice(categoryId: number): Promise<PriceNameModel[]|IErrorResponse> {
         
         const sql = `
                     SELECT 

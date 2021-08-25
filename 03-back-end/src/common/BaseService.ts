@@ -36,9 +36,10 @@ export default abstract class BaseService<ReturnModel extends IModel> {
 
                     if (Array.isArray(rows)) {
                         for (const row of rows) {
-                            lista.push(await this.adaptModel(row, options))
+                            lista.push(await this.adaptModel(row, options));
                         }
                     }
+                    
                     resolve(lista);
                 })
                 .catch((error) => {

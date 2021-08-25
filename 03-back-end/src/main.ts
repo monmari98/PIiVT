@@ -18,6 +18,8 @@ import PriceNameSecvice from './components/price-name/service';
 import PriceNameRouter from './components/price-name/router';
 import CategorySecvice from './components/caregory/service';
 import CategoryRouter from './components/caregory/router';
+import ServiceSecvice from './components/service/service';
+import ServiceRouter from './components/service/router';
 
 async function main() {
     const application: express.Application = express();
@@ -63,6 +65,7 @@ async function main() {
         priceAgeService: new PriceAgeSecvice(resouces),
         priceNameService: new PriceNameSecvice(resouces),
         categoryService: new CategorySecvice(resouces),
+        serviceService: new ServiceSecvice(resouces),
     }
 
     application.use(Config.server.static.route, express.static(Config.server.static.path, {
@@ -81,6 +84,7 @@ async function main() {
         new PriceAgeRouter(),
         new PriceNameRouter(),
         new CategoryRouter(),
+        new ServiceRouter(),
     ]);
 
     application.use((req, res) => {
