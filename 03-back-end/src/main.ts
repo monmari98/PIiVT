@@ -12,6 +12,12 @@ import PatientRouter from './components/patient/router';
 import MedicalRecordSecvice from './components/medical-record/service';
 import MedicalRecordRouter from './components/medical-record/router';
 import AuthRouter from './components/auth/router';
+import PriceAgeSecvice from './components/price-age/service';
+import PriceAgeRouter from './components/price-age/router';
+import PriceNameSecvice from './components/price-name/service';
+import PriceNameRouter from './components/price-name/router';
+import CategorySecvice from './components/caregory/service';
+import CategoryRouter from './components/caregory/router';
 
 async function main() {
     const application: express.Application = express();
@@ -54,6 +60,9 @@ async function main() {
         administratorService: new AdministratorSecvice(resouces), 
         patientService: new PatientSecvice(resouces),
         medicalRecordService: new MedicalRecordSecvice(resouces),
+        priceAgeService: new PriceAgeSecvice(resouces),
+        priceNameService: new PriceNameSecvice(resouces),
+        categoryService: new CategorySecvice(resouces),
     }
 
     application.use(Config.server.static.route, express.static(Config.server.static.path, {
@@ -69,6 +78,9 @@ async function main() {
         new AdministratorRouter(),
         new PatientRouter(),
         new MedicalRecordRouter(),
+        new PriceAgeRouter(),
+        new PriceNameRouter(),
+        new CategoryRouter(),
     ]);
 
     application.use((req, res) => {
