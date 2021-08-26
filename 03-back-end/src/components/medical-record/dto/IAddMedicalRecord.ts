@@ -5,6 +5,10 @@ interface IAddMedicalRecord {
     patientId: number;
 }
 
+interface IUploadPhoto {
+    imagePath: string;  
+}
+
 const ajv = new Ajv();
 
 const IAddMedicalRecordValidator = ajv.compile({
@@ -29,3 +33,4 @@ const IAddMedicalRecordValidator = ajv.compile({
 
 export { IAddMedicalRecord };
 export { IAddMedicalRecordValidator };
+export {IUploadPhoto}
