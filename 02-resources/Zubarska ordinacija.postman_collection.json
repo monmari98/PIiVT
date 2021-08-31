@@ -1,0 +1,4127 @@
+{
+	"info": {
+		"_postman_id": "c27f0df9-b724-4094-9d20-d31edd3d491c",
+		"name": "Zubarska ordinacija",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "POST admin auth login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Marija\",\r\n    \"password\": \"Monmari998\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/auth/administrator/login",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"auth",
+								"administrator",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST admin auth login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Marija\",\r\n    \"password\": \"Monmari998\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/auth/administrator/login",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"auth",
+										"administrator",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1070"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42e-39J/DPUr1yXMEqbN6TCj5+1t3pM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:00:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"authToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWRlbnRpdHkiOiJNYXJpamEiLCJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlhdCI6MTYzMDQwNDAyMCwiZXhwIjoxNjMxMDA4ODIwLCJpc3MiOiJsb2NhbGhvc3QifQ.K6c8uKeP9pYhUN6CSeIpBymQQavv5g-Bv96TaYd9yNXRl5lYIbVozjPpzFNSLYj6TG3NHvqFbQYdZPFmDwo2IMvFxg3ZhvNqYh8jkr_yqlpphD3wZWfFSjc_sJibGsqvxTcbq7n8MSBe63V8N_BrHtf5PUG1xFfoofiwPiN49-8mn31r28hCTqZYCOr7upOrRT6YM827pjc9Y1WyUfBuqLtQHGmeisamty6V7dFPdFGBKia3Pp0ZexbdXl5iUL9ImSfzhfR_Lzc1uoVwIil_HvJkUphgj4VMW-ZwdIjuKjm5Wc_3mQi_BVYkG7zUNINe4dWz4zk_g9R7k3lN5faNJg\",\n    \"refreshToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWRlbnRpdHkiOiJNYXJpamEiLCJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlhdCI6MTYzMDQwNDAyMCwiZXhwIjoxNjYxOTQwMDIwLCJpc3MiOiJsb2NhbGhvc3QifQ.NvuUml23iMZ4pPxOwL2ahqCoWaQr5M3Y4F47d1vVk71jixzBpnV-L5ad3GsKUj_dd3G2nwKpn7AkXDREVCYuhYaKbPCzCjiPntFRHUIqvbJGZevoqkLn9iKS_dOH6xWE1IXqZKA9bp90VOYt4RMhks5qltShUiEG42Ao2HSEpC6yvOIBdDcgWwwiLK9QJCf05InmExaa7fy-JrS2oU_CO7Ry-h9UpYMv2KnZ_hfg7RdmRoiVTwg2mBgq-06L3KSdy0q9jDJNVpG162iiLShuG04AYkCmuIJcywr7krlMD3zfgFe0YAqTE-AIvVxY_fFBctl57ZMT85kq2vZdWrD0ug\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Administrator",
+			"item": [
+				{
+					"name": "GET all administrators",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/administrator/",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"administrator",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET all administrators",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/administrator/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"administrator",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "244"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f4-Oj6bapKtCedOW5shsooLIDUHwC4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:03:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"administratorId\": 1,\n        \"username\": \"monmari98\",\n        \"passwordHash\": \"$2b$11$O7easSMGuRIf1TRm7l77YOZlFGTfQGXz/WI20ZEMe/ebrBA0.q3YS\"\n    },\n    {\n        \"administratorId\": 2,\n        \"username\": \"Marija\",\n        \"passwordHash\": \"$2b$11$icNVIIcTwcILkxdEXHJNKOn4/jliQSnkj93DpX6rtL7/kNnFkvieG\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET single administrator by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/administrator/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"administrator",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET single administrator by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/administrator/1",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"administrator",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "122"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7a-n9xaZ9/vErr4SNREfpxN6wdgXwE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:04:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 1,\n    \"username\": \"monmari98\",\n    \"passwordHash\": \"$2b$11$O7easSMGuRIf1TRm7l77YOZlFGTfQGXz/WI20ZEMe/ebrBA0.q3YS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST add new administrator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Masa\",\r\n    \"password\": \"Password123!@#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/administrator/",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"administrator",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST add new administrator",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Masa\",\r\n    \"password\": \"Password123!@#\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/administrator/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"administrator",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "117"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"75-WqF2tF/d364+qmyNWIQ6b5/Hk64\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:05:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 4,\n    \"username\": \"Masa\",\n    \"passwordHash\": \"$2b$11$lYkw3WEurJjAewRPlzNyzemWCrsJzZuqvIisP1G8xdHffs.8.qvBS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT edit an administrator by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"MASA\",\r\n    \"password\": \"LOZINKA123!@#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/administrator/4",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"administrator",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT edit an administrator by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"MASA\",\r\n    \"password\": \"LOZINKA123!@#\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/administrator/4",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"administrator",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "117"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"75-+ZjTtIAU5k7H7vfPeff5Xi90do4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:07:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 4,\n    \"username\": \"MASA\",\n    \"passwordHash\": \"$2b$11$baH6nMhInCPSb2Vrs8.3SuiG.gjo0dOMVjBe/3QIgzKuevhq1388W\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE administrator by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/administrator/4",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"administrator",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE administrator by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/administrator/4",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"administrator",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:13:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET all login logs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/login-log",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"login-log"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET all login logs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/login-log/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"login-log",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "464"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d0-b7VMTcCpWQoEyAcjKBfoaPFMBYs\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:08:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"login_log_id\": 1,\n        \"log\": \"Unknown password :aaaaaaaa\",\n        \"administrator_id\": 1,\n        \"created_at\": \"2021-08-24T18:21:27.000Z\"\n    },\n    {\n        \"login_log_id\": 3,\n        \"log\": \"Unknown username: nek\",\n        \"administrator_id\": null,\n        \"created_at\": \"2021-08-24T18:22:49.000Z\"\n    },\n    {\n        \"login_log_id\": 28,\n        \"log\": \"Unknown password: dasdas\",\n        \"administrator_id\": 1,\n        \"created_at\": \"2021-08-24T22:50:28.000Z\"\n    },\n    {\n        \"login_log_id\": 29,\n        \"log\": \"Unknown username: asdsadasda\",\n        \"administrator_id\": null,\n        \"created_at\": \"2021-08-24T22:53:22.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET login logs by admin id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/login-log/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"login-log",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET all login logs Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/login-log/1",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"login-log",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "230"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e6-+blRrkxwJNpKB/Y75pH1DysU+bI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:11:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"login_log_id\": 1,\n        \"log\": \"Unknown password :aaaaaaaa\",\n        \"administrator_id\": 1,\n        \"created_at\": \"2021-08-24T18:21:27.000Z\"\n    },\n    {\n        \"login_log_id\": 28,\n        \"log\": \"Unknown password: dasdas\",\n        \"administrator_id\": 1,\n        \"created_at\": \"2021-08-24T22:50:28.000Z\"\n    }\n]"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{AUTH_ADMINISTRATOR}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "GET all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/category/",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"category",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET all categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/category/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"category",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1768"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6e8-JLITZVPExeI4LqFMXGfbpt0ENlQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:14:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"categoryId\": 1,\n        \"name\": \"preventivna intervencija\",\n        \"description\": \"obicna mala plomba\",\n        \"priceName\": [\n            {\n                \"priceNameId\": 1,\n                \"name\": \"izdvojeno pružanje usluge\",\n                \"categoryId\": 1,\n                \"priceAge\": [\n                    {\n                        \"priceAgeId\": 1,\n                        \"name\": \"pružanje usluge za decu\",\n                        \"age\": 12,\n                        \"amount\": 1000,\n                        \"priceNameId\": 1\n                    },\n                    {\n                        \"priceAgeId\": 2,\n                        \"name\": \"pružanje usluge za penzionere\",\n                        \"age\": 65,\n                        \"amount\": 1500,\n                        \"priceNameId\": 1\n                    },\n                    {\n                        \"priceAgeId\": 3,\n                        \"name\": \"pruzanje usluga za odrasle\",\n                        \"age\": 0,\n                        \"amount\": 2500,\n                        \"priceNameId\": 1\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"categoryId\": 2,\n        \"name\": \"redovna intervencija\",\n        \"description\": \"Veca plomba sa rekonstrukcijom\",\n        \"priceName\": [\n            {\n                \"priceNameId\": 2,\n                \"name\": \"izdvojeno pružanje usluge\",\n                \"categoryId\": 2,\n                \"priceAge\": [\n                    {\n                        \"priceAgeId\": 4,\n                        \"name\": \"pružanje usluge za decu\",\n                        \"age\": 12,\n                        \"amount\": 3400,\n                        \"priceNameId\": 2\n                    },\n                    {\n                        \"priceAgeId\": 5,\n                        \"name\": \"pruzanje usluga za odrasle\",\n                        \"age\": 0,\n                        \"amount\": 6900,\n                        \"priceNameId\": 2\n                    },\n                    {\n                        \"priceAgeId\": 8,\n                        \"name\": \"pruzanje usluga za odrasle\",\n                        \"age\": 0,\n                        \"amount\": 3200,\n                        \"priceNameId\": 2\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"categoryId\": 3,\n        \"name\": \"hirurška intervencija\",\n        \"description\": \"jedan koren\",\n        \"priceName\": [\n            {\n                \"priceNameId\": 3,\n                \"name\": \"pružanje usluge u paketu\",\n                \"categoryId\": 3,\n                \"priceAge\": []\n            }\n        ]\n    },\n    {\n        \"categoryId\": 5,\n        \"name\": \"hirurška intervencija 2\",\n        \"description\": \"dva korena\",\n        \"priceName\": [\n            {\n                \"priceNameId\": 5,\n                \"name\": \"pružanje usluge u paketu\",\n                \"categoryId\": 5,\n                \"priceAge\": [\n                    {\n                        \"priceAgeId\": 10,\n                        \"name\": \"pruzanje usluga za odrasle\",\n                        \"age\": 12,\n                        \"amount\": 5555,\n                        \"priceNameId\": 5\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"categoryId\": 6,\n        \"name\": \"proteza\",\n        \"description\": \"cela gornja vilica\",\n        \"priceName\": [\n            {\n                \"priceNameId\": 6,\n                \"name\": \"protetika\",\n                \"categoryId\": 6,\n                \"priceAge\": [\n                    {\n                        \"priceAgeId\": 6,\n                        \"name\": \"pružanje usluge za penzionere\",\n                        \"age\": 65,\n                        \"amount\": 10000,\n                        \"priceNameId\": 6\n                    },\n                    {\n                        \"priceAgeId\": 7,\n                        \"name\": \"pružanje usluge za decu\",\n                        \"age\": 12,\n                        \"amount\": 15000,\n                        \"priceNameId\": 6\n                    }\n                ]\n            },\n            {\n                \"priceNameId\": 7,\n                \"name\": \"fiksna proteza\",\n                \"categoryId\": 7,\n                \"priceAge\": []\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/category/2",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET category by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/category/2",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"category",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "461"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1cd-b+9vSsuZqAbLazSK2dI+dzJJGAs\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:15:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": 2,\n    \"name\": \"redovna intervencija\",\n    \"description\": \"Veca plomba sa rekonstrukcijom\",\n    \"priceName\": [\n        {\n            \"priceNameId\": 2,\n            \"name\": \"izdvojeno pružanje usluge\",\n            \"categoryId\": 2,\n            \"priceAge\": [\n                {\n                    \"priceAgeId\": 4,\n                    \"name\": \"pružanje usluge za decu\",\n                    \"age\": 12,\n                    \"amount\": 3400,\n                    \"priceNameId\": 2\n                },\n                {\n                    \"priceAgeId\": 5,\n                    \"name\": \"pruzanje usluga za odrasle\",\n                    \"age\": 0,\n                    \"amount\": 6900,\n                    \"priceNameId\": 2\n                },\n                {\n                    \"priceAgeId\": 8,\n                    \"name\": \"pruzanje usluga za odrasle\",\n                    \"age\": 0,\n                    \"amount\": 3200,\n                    \"priceNameId\": 2\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "POST add new category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nova kategorija\",\r\n    \"description\": \"lalalalalalalala\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/category",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST add new category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Nova kategorija\",\r\n    \"description\": \"lalalalalalalala\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/category",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"59-YjrDkRrFHvPuGZzgWo2044SWa3w\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:17:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": 7,\n    \"name\": \"Nova kategorija\",\n    \"description\": \"lalalalalalalala\",\n    \"priceName\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT edit category by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Izmenjena kategorija!!!!!!\",\r\n    \"description\": \"dadadada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/category/7",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"category",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT edit category by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Izmenjena kategorija!!!!!!\",\r\n    \"description\": \"dadadada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/category/7",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"category",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-f11ihh5vKqYZvNHNMwNhs+iQFfU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:19:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": 7,\n    \"name\": \"Izmenjena kategorija!!!!!!\",\n    \"description\": \"dadadada\",\n    \"priceName\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE delete category by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Izmenjena kategorija!!!!!!\",\r\n    \"description\": \"dadadada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/category/7",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"category",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE delete category by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Izmenjena kategorija!!!!!!\",\r\n    \"description\": \"dadadada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/category/7",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"category",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:20:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{AUTH_ADMINISTRATOR}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "GET all carts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/cart",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET all carts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/cart",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3137"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c41-viNqRGEVjk3/8Xcn4BozteecbQU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:22:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 4,\n        \"createdAt\": \"2021-08-25T16:05:58.000Z\",\n        \"totalPrice\": 12600\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 5,\n        \"createdAt\": \"2021-08-25T16:07:37.000Z\",\n        \"totalPrice\": 12600\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 6,\n        \"createdAt\": \"2021-08-25T16:11:48.000Z\",\n        \"totalPrice\": 12600\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 7,\n        \"createdAt\": \"2021-08-25T16:17:52.000Z\",\n        \"totalPrice\": 12600\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 8,\n        \"createdAt\": \"2021-08-25T16:18:56.000Z\",\n        \"totalPrice\": 12600\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 9,\n        \"createdAt\": \"2021-08-25T16:19:52.000Z\",\n        \"totalPrice\": 12600\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 10,\n        \"createdAt\": \"2021-08-25T16:20:45.000Z\",\n        \"totalPrice\": 12600\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 11,\n        \"createdAt\": \"2021-08-25T16:31:40.000Z\",\n        \"totalPrice\": 12600\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 12,\n        \"createdAt\": \"2021-08-25T16:33:34.000Z\",\n        \"totalPrice\": 12600\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 13,\n        \"createdAt\": \"2021-08-25T16:33:59.000Z\",\n        \"totalPrice\": 12600\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 14,\n        \"createdAt\": \"2021-08-25T16:35:52.000Z\",\n        \"totalPrice\": 13500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 15,\n        \"createdAt\": \"2021-08-25T16:44:05.000Z\",\n        \"totalPrice\": 13500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 16,\n        \"createdAt\": \"2021-08-25T16:45:06.000Z\",\n        \"totalPrice\": 13500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 17,\n        \"createdAt\": \"2021-08-25T16:48:09.000Z\",\n        \"totalPrice\": 13500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 18,\n        \"createdAt\": \"2021-08-25T16:50:05.000Z\",\n        \"totalPrice\": 13500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 19,\n        \"createdAt\": \"2021-08-25T16:51:33.000Z\",\n        \"totalPrice\": 13500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 20,\n        \"createdAt\": \"2021-08-25T16:53:28.000Z\",\n        \"totalPrice\": 13500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 21,\n        \"createdAt\": \"2021-08-25T17:12:54.000Z\",\n        \"totalPrice\": 13500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 22,\n        \"createdAt\": \"2021-08-25T17:13:59.000Z\",\n        \"totalPrice\": 13500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 23,\n        \"createdAt\": \"2021-08-25T17:15:48.000Z\",\n        \"totalPrice\": 13500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 24,\n        \"createdAt\": \"2021-08-25T17:16:55.000Z\",\n        \"totalPrice\": 27000\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 25,\n        \"createdAt\": \"2021-08-25T17:49:04.000Z\",\n        \"totalPrice\": 27000\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 26,\n        \"createdAt\": \"2021-08-25T17:49:45.000Z\",\n        \"totalPrice\": 40500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 27,\n        \"createdAt\": \"2021-08-25T17:50:42.000Z\",\n        \"totalPrice\": 40500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 28,\n        \"createdAt\": \"2021-08-25T17:53:47.000Z\",\n        \"totalPrice\": 40500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 29,\n        \"createdAt\": \"2021-08-25T17:55:23.000Z\",\n        \"totalPrice\": 40500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 30,\n        \"createdAt\": \"2021-08-25T17:55:43.000Z\",\n        \"totalPrice\": 40500\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 31,\n        \"createdAt\": \"2021-08-25T18:00:18.000Z\",\n        \"totalPrice\": 0\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 32,\n        \"createdAt\": \"2021-08-25T18:02:12.000Z\",\n        \"totalPrice\": 11110\n    },\n    {\n        \"medicalRecord\": [],\n        \"services\": [],\n        \"cartId\": 33,\n        \"createdAt\": \"2021-08-25T18:23:36.000Z\",\n        \"totalPrice\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET cart by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/cart/7",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"cart",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET cart by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/cart/7",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"cart",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "103"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"67-/xFstj6xxEnI19pjus4mxOR7Opw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:22:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"medicalRecord\": [],\n    \"services\": [],\n    \"cartId\": 7,\n    \"createdAt\": \"2021-08-25T16:17:52.000Z\",\n    \"totalPrice\": 12600\n}"
+						}
+					]
+				},
+				{
+					"name": "POST get patient current cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/user/1/cart",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"user",
+								"1",
+								"cart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST get patient current cart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/user/1/cart",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"user",
+										"1",
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "939"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3ab-xe/hJ4dJEC403R9OyiJ0qmM3pag\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:26:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"medicalRecord\": [\n        {\n            \"medicalRecordId\": 1,\n            \"tooth\": \"gornja leva 4.\",\n            \"patientId\": 1,\n            \"patient\": {\n                \"patientId\": 1,\n                \"firstName\": \"marija\",\n                \"lastName\": \"simic\",\n                \"jmbg\": \"0103998710093\",\n                \"email\": \"marija.simic.17@singimail.rs\",\n                \"age\": 23,\n                \"isActive\": true\n            },\n            \"photo\": []\n        },\n        {\n            \"medicalRecordId\": 4,\n            \"tooth\": \"donji desni kutnjak\",\n            \"patientId\": 1,\n            \"patient\": {\n                \"patientId\": 1,\n                \"firstName\": \"marija\",\n                \"lastName\": \"simic\",\n                \"jmbg\": \"0103998710093\",\n                \"email\": \"marija.simic.17@singimail.rs\",\n                \"age\": 23,\n                \"isActive\": true\n            },\n            \"photo\": []\n        },\n        {\n            \"medicalRecordId\": 13,\n            \"tooth\": \"gornji desni kutnjak\",\n            \"patientId\": 1,\n            \"patient\": {\n                \"patientId\": 1,\n                \"firstName\": \"marija\",\n                \"lastName\": \"simic\",\n                \"jmbg\": \"0103998710093\",\n                \"email\": \"marija.simic.17@singimail.rs\",\n                \"age\": 23,\n                \"isActive\": true\n            },\n            \"photo\": []\n        }\n    ],\n    \"services\": [],\n    \"cartId\": 34,\n    \"createdAt\": \"2021-08-31T11:26:25.000Z\",\n    \"totalPrice\": 0,\n    \"patient\": {\n        \"patientId\": 1,\n        \"firstName\": \"marija\",\n        \"lastName\": \"simic\",\n        \"jmbg\": \"0103998710093\",\n        \"email\": \"marija.simic.17@singimail.rs\",\n        \"age\": 23,\n        \"isActive\": true\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT set patient current cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/user/1/cart/34",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"user",
+								"1",
+								"cart",
+								"34"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT set patient current cart",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/user/1/cart/34",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"user",
+										"1",
+										"cart",
+										"34"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "943"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3af-UZpyExxzjZ5SyL46xg62phZWx28\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:28:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"medicalRecord\": [\n        {\n            \"medicalRecordId\": 1,\n            \"tooth\": \"gornja leva 4.\",\n            \"patientId\": 1,\n            \"patient\": {\n                \"patientId\": 1,\n                \"firstName\": \"marija\",\n                \"lastName\": \"simic\",\n                \"jmbg\": \"0103998710093\",\n                \"email\": \"marija.simic.17@singimail.rs\",\n                \"age\": 23,\n                \"isActive\": true\n            },\n            \"photo\": []\n        },\n        {\n            \"medicalRecordId\": 4,\n            \"tooth\": \"donji desni kutnjak\",\n            \"patientId\": 1,\n            \"patient\": {\n                \"patientId\": 1,\n                \"firstName\": \"marija\",\n                \"lastName\": \"simic\",\n                \"jmbg\": \"0103998710093\",\n                \"email\": \"marija.simic.17@singimail.rs\",\n                \"age\": 23,\n                \"isActive\": true\n            },\n            \"photo\": []\n        },\n        {\n            \"medicalRecordId\": 13,\n            \"tooth\": \"gornji desni kutnjak\",\n            \"patientId\": 1,\n            \"patient\": {\n                \"patientId\": 1,\n                \"firstName\": \"marija\",\n                \"lastName\": \"simic\",\n                \"jmbg\": \"0103998710093\",\n                \"email\": \"marija.simic.17@singimail.rs\",\n                \"age\": 23,\n                \"isActive\": true\n            },\n            \"photo\": []\n        }\n    ],\n    \"services\": [],\n    \"cartId\": 34,\n    \"createdAt\": \"2021-08-31T11:26:25.000Z\",\n    \"totalPrice\": 18155,\n    \"patient\": {\n        \"patientId\": 1,\n        \"firstName\": \"marija\",\n        \"lastName\": \"simic\",\n        \"jmbg\": \"0103998710093\",\n        \"email\": \"marija.simic.17@singimail.rs\",\n        \"age\": 23,\n        \"isActive\": true\n    }\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{AUTH_ADMINISTRATOR}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Medical record",
+			"item": [
+				{
+					"name": "GET all medical records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/medical-record",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"medical-record"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET all medical records",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/medical-record",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"medical-record"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2206"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"89e-t6duxXGZx4ack5gt/oAaZ6SD+oQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:29:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"medicalRecordId\": 1,\n        \"tooth\": \"gornja leva 4.\",\n        \"patientId\": 1,\n        \"patient\": {\n            \"patientId\": 1,\n            \"firstName\": \"marija\",\n            \"lastName\": \"simic\",\n            \"jmbg\": \"0103998710093\",\n            \"email\": \"marija.simic.17@singimail.rs\",\n            \"age\": 23,\n            \"isActive\": true\n        },\n        \"photo\": []\n    },\n    {\n        \"medicalRecordId\": 4,\n        \"tooth\": \"donji desni kutnjak\",\n        \"patientId\": 1,\n        \"patient\": {\n            \"patientId\": 1,\n            \"firstName\": \"marija\",\n            \"lastName\": \"simic\",\n            \"jmbg\": \"0103998710093\",\n            \"email\": \"marija.simic.17@singimail.rs\",\n            \"age\": 23,\n            \"isActive\": true\n        },\n        \"photo\": []\n    },\n    {\n        \"medicalRecordId\": 5,\n        \"tooth\": \"donja desna 8-ica\",\n        \"patientId\": 3,\n        \"patient\": {\n            \"patientId\": 3,\n            \"firstName\": \"nads\",\n            \"lastName\": \"jkladsn\",\n            \"jmbg\": \"7676776765543\",\n            \"email\": \"adsj@sad.ew\",\n            \"age\": 78,\n            \"isActive\": true\n        },\n        \"photo\": []\n    },\n    {\n        \"medicalRecordId\": 7,\n        \"tooth\": \"nesto\",\n        \"patientId\": 2,\n        \"patient\": {\n            \"patientId\": 2,\n            \"firstName\": \"aaa\",\n            \"lastName\": \"aaaa\",\n            \"jmbg\": \"0908776158824\",\n            \"email\": \"neki@random.mail\",\n            \"age\": 12,\n            \"isActive\": true\n        },\n        \"photo\": []\n    },\n    {\n        \"medicalRecordId\": 8,\n        \"tooth\": \"jos nesto\",\n        \"patientId\": 2,\n        \"patient\": {\n            \"patientId\": 2,\n            \"firstName\": \"aaa\",\n            \"lastName\": \"aaaa\",\n            \"jmbg\": \"0908776158824\",\n            \"email\": \"neki@random.mail\",\n            \"age\": 12,\n            \"isActive\": true\n        },\n        \"photo\": []\n    },\n    {\n        \"medicalRecordId\": 9,\n        \"tooth\": \"nasna\",\n        \"patientId\": 2,\n        \"patient\": {\n            \"patientId\": 2,\n            \"firstName\": \"aaa\",\n            \"lastName\": \"aaaa\",\n            \"jmbg\": \"0908776158824\",\n            \"email\": \"neki@random.mail\",\n            \"age\": 12,\n            \"isActive\": true\n        },\n        \"photo\": []\n    },\n    {\n        \"medicalRecordId\": 11,\n        \"tooth\": \"zuuuuuub\",\n        \"patientId\": 4,\n        \"patient\": {\n            \"patientId\": 4,\n            \"firstName\": \"NovoIme\",\n            \"lastName\": \"prezime\",\n            \"jmbg\": \"0101001010101\",\n            \"email\": \"msa@ams.sam\",\n            \"age\": 42,\n            \"isActive\": false\n        },\n        \"photo\": [\n            {\n                \"photoId\": 4,\n                \"imagePath\": \"static/uploads/2021/80/9d534b38-5d43-4f9d-a9cf-d513e9eb22f7Teeth.jpg\"\n            }\n        ]\n    },\n    {\n        \"medicalRecordId\": 12,\n        \"tooth\": \"zuuuuuub\",\n        \"patientId\": 4,\n        \"patient\": {\n            \"patientId\": 4,\n            \"firstName\": \"NovoIme\",\n            \"lastName\": \"prezime\",\n            \"jmbg\": \"0101001010101\",\n            \"email\": \"msa@ams.sam\",\n            \"age\": 42,\n            \"isActive\": false\n        },\n        \"photo\": [\n            {\n                \"photoId\": 6,\n                \"imagePath\": \"static/uploads/2021/80/5dec10c1-ce70-4173-9979-b2feb0dc51d0Teeth.jpg\"\n            },\n            {\n                \"photoId\": 7,\n                \"imagePath\": \"static/uploads/2021/80/9b89677f-a2e8-45fd-9ab0-9137a2618a62Teeth.jpg\"\n            }\n        ]\n    },\n    {\n        \"medicalRecordId\": 13,\n        \"tooth\": \"gornji desni kutnjak\",\n        \"patientId\": 1,\n        \"patient\": {\n            \"patientId\": 1,\n            \"firstName\": \"marija\",\n            \"lastName\": \"simic\",\n            \"jmbg\": \"0103998710093\",\n            \"email\": \"marija.simic.17@singimail.rs\",\n            \"age\": 23,\n            \"isActive\": true\n        },\n        \"photo\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET  medical record by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/medical-record/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"medical-record",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET  medical record by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/medical-record/1",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"medical-record",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "224"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e0-USjdcZVzsaacrnDTMKFFb+fOxFk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:30:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"medicalRecordId\": 1,\n    \"tooth\": \"gornja leva 4.\",\n    \"patientId\": 1,\n    \"patient\": {\n        \"patientId\": 1,\n        \"firstName\": \"marija\",\n        \"lastName\": \"simic\",\n        \"jmbg\": \"0103998710093\",\n        \"email\": \"marija.simic.17@singimail.rs\",\n        \"age\": 23,\n        \"isActive\": true\n    },\n    \"photo\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "POST add medical record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\n    \"tooth\": \"Donja cetvorka\",\n    \"patientId\": 2\n}",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/bijan/Pictures/Teeth.jpg"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/medical-record/",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"medical-record",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST add medical record",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "data",
+											"value": "{\n    \"tooth\": \"Donja cetvorka\",\n    \"patientId\": 2\n}",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/bijan/Pictures/Teeth.jpg"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/medical-record/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"medical-record",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "305"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"131-4BMVZFO+WVNjUun9okML/d70S2Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:33:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"medicalRecordId\": 14,\n    \"tooth\": \"Donja cetvorka\",\n    \"patientId\": 2,\n    \"patient\": {\n        \"patientId\": 2,\n        \"firstName\": \"aaa\",\n        \"lastName\": \"aaaa\",\n        \"jmbg\": \"0908776158824\",\n        \"email\": \"neki@random.mail\",\n        \"age\": 12,\n        \"isActive\": true\n    },\n    \"photo\": [\n        {\n            \"photoId\": 8,\n            \"imagePath\": \"static/uploads/2021/80/08f9f008-e916-4ec5-86b9-e8bec4093231Teeth.jpg\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT edit medical record by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tooth\": \"Donja cetvorka vadjenje zivca\",\r\n    \"patientId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/medical-record/14",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"medical-record",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT edit medical record by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tooth\": \"Donja cetvorka vadjenje zivca\",\r\n    \"patientId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/medical-record/14",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"medical-record",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "320"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"140-qsvT0m7asLVSRSOqQ/+rOvaz6GU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:35:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"medicalRecordId\": 14,\n    \"tooth\": \"Donja cetvorka vadjenje zivca\",\n    \"patientId\": 2,\n    \"patient\": {\n        \"patientId\": 2,\n        \"firstName\": \"aaa\",\n        \"lastName\": \"aaaa\",\n        \"jmbg\": \"0908776158824\",\n        \"email\": \"neki@random.mail\",\n        \"age\": 12,\n        \"isActive\": true\n    },\n    \"photo\": [\n        {\n            \"photoId\": 8,\n            \"imagePath\": \"static/uploads/2021/80/08f9f008-e916-4ec5-86b9-e8bec4093231Teeth.jpg\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE delete medical record by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tooth\": \"Donja cetvorka vadjenje zivca\",\r\n    \"patientId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/medical-record/14",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"medical-record",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE delete medical record by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tooth\": \"Donja cetvorka vadjenje zivca\",\r\n    \"patientId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/medical-record/14",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"medical-record",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-061nSYZZcDtV/v8el0ygFLbSjSg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:37:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Medical record deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST add new photo to medical records",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\n    \"tooth\": \"Donja cetvorka vadjenje zivca\",\n    \"patientId\": 2\n}",
+									"type": "text"
+								},
+								{
+									"key": "photo123",
+									"type": "file",
+									"src": "/C:/Users/bijan/Pictures/Teeth.jpg"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/medical-record/13/photo",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"medical-record",
+								"13",
+								"photo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST add new photo to medical records",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "data",
+											"value": "{\n    \"tooth\": \"Donja cetvorka vadjenje zivca\",\n    \"patientId\": 2\n}",
+											"type": "text"
+										},
+										{
+											"key": "photo123",
+											"type": "file",
+											"src": "/C:/Users/bijan/Pictures/Teeth.jpg"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/medical-record/13/photo",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"medical-record",
+										"13",
+										"photo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-lvNV6041FiMZbf/CfRh605aJ0/4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:40:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"medicalRecordId\": 13,\n    \"tooth\": \"gornji desni kutnjak\",\n    \"patientId\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE delete photo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tooth\": \"Donja cetvorka vadjenje zivca\",\r\n    \"patientId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/medical-record/13/photo/9",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"medical-record",
+								"13",
+								"photo",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE delete photo",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tooth\": \"Donja cetvorka vadjenje zivca\",\r\n    \"patientId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/medical-record/13/photo/9",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"medical-record",
+										"13",
+										"photo",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-sDXFSyZX5vbnY8m7ZAbwS0SgyHw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:41:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Photo deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{AUTH_ADMINISTRATOR}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "GET all patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/patient",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"patient"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET all patients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/patient",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"patient"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "527"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20f-a4EqM/QzWk/wCxBamIX4Po63VO8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:43:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"patientId\": 1,\n        \"firstName\": \"marija\",\n        \"lastName\": \"simic\",\n        \"jmbg\": \"0103998710093\",\n        \"email\": \"marija.simic.17@singimail.rs\",\n        \"age\": 23,\n        \"isActive\": true\n    },\n    {\n        \"patientId\": 2,\n        \"firstName\": \"aaa\",\n        \"lastName\": \"aaaa\",\n        \"jmbg\": \"0908776158824\",\n        \"email\": \"neki@random.mail\",\n        \"age\": 12,\n        \"isActive\": true\n    },\n    {\n        \"patientId\": 3,\n        \"firstName\": \"nads\",\n        \"lastName\": \"jkladsn\",\n        \"jmbg\": \"7676776765543\",\n        \"email\": \"adsj@sad.ew\",\n        \"age\": 78,\n        \"isActive\": true\n    },\n    {\n        \"patientId\": 4,\n        \"firstName\": \"NovoIme\",\n        \"lastName\": \"prezime\",\n        \"jmbg\": \"0101001010101\",\n        \"email\": \"msa@ams.sam\",\n        \"age\": 42,\n        \"isActive\": false\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET patient by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/patient/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"patient",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET patient by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/patient/1",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"patient",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "142"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8e-y1gsfuXNaavSt4WLUDv9ktd/Y20\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:44:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"patientId\": 1,\n    \"firstName\": \"marija\",\n    \"lastName\": \"simic\",\n    \"jmbg\": \"0103998710093\",\n    \"email\": \"marija.simic.17@singimail.rs\",\n    \"age\": 23,\n    \"isActive\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "POST add new patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"Jelic\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@jelic.rs\",\r\n    \"age\": 28\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/patient/",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"patient",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST add new patient",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"Jelic\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@jelic.rs\",\r\n    \"age\": 28\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/patient/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"patient",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "129"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"81-i3kGW/00FoorX+qUDwU8lsYJP2w\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:46:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"patientId\": 6,\n    \"firstName\": \"Jelena\",\n    \"lastName\": \"Jelic\",\n    \"jmbg\": \"0203998721605\",\n    \"email\": \"jelena@jelic.rs\",\n    \"age\": 28,\n    \"isActive\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT edit patient by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"JELISAVETIC\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@gmail.rs\",\r\n    \"age\": 29,\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/patient/6",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"patient",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT edit patient by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"JELISAVETIC\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@gmail.rs\",\r\n    \"age\": 29,\r\n    \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/patient/6",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"patient",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "135"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"87-lF9ZkK2aGju3pJqAnTcN75+mJZw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:48:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"patientId\": 6,\n    \"firstName\": \"Jelena\",\n    \"lastName\": \"JELISAVETIC\",\n    \"jmbg\": \"0203998721605\",\n    \"email\": \"jelena@gmail.rs\",\n    \"age\": 29,\n    \"isActive\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE delete patient by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"JELISAVETIC\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@gmail.rs\",\r\n    \"age\": 29,\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/patient/6",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"patient",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE delete patient by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"JELISAVETIC\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@gmail.rs\",\r\n    \"age\": 29,\r\n    \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/patient/6",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"patient",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:49:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{AUTH_ADMINISTRATOR}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Price name",
+			"item": [
+				{
+					"name": "GET all Price names",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/price-name",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-name"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET all Price names",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/price-name",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-name"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1294"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"50e-RcOjyRaks28MpeL1ksKXmDfcicQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:50:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"priceNameId\": 1,\n        \"name\": \"izdvojeno pružanje usluge\",\n        \"categoryId\": 1,\n        \"priceAge\": [\n            {\n                \"priceAgeId\": 1,\n                \"name\": \"pružanje usluge za decu\",\n                \"age\": 12,\n                \"amount\": 1000,\n                \"priceNameId\": 1\n            },\n            {\n                \"priceAgeId\": 2,\n                \"name\": \"pružanje usluge za penzionere\",\n                \"age\": 65,\n                \"amount\": 1500,\n                \"priceNameId\": 1\n            },\n            {\n                \"priceAgeId\": 3,\n                \"name\": \"pruzanje usluga za odrasle\",\n                \"age\": 0,\n                \"amount\": 2500,\n                \"priceNameId\": 1\n            }\n        ]\n    },\n    {\n        \"priceNameId\": 2,\n        \"name\": \"izdvojeno pružanje usluge\",\n        \"categoryId\": 2,\n        \"priceAge\": [\n            {\n                \"priceAgeId\": 4,\n                \"name\": \"pružanje usluge za decu\",\n                \"age\": 12,\n                \"amount\": 3400,\n                \"priceNameId\": 2\n            },\n            {\n                \"priceAgeId\": 5,\n                \"name\": \"pruzanje usluga za odrasle\",\n                \"age\": 0,\n                \"amount\": 6900,\n                \"priceNameId\": 2\n            },\n            {\n                \"priceAgeId\": 8,\n                \"name\": \"pruzanje usluga za odrasle\",\n                \"age\": 0,\n                \"amount\": 3200,\n                \"priceNameId\": 2\n            }\n        ]\n    },\n    {\n        \"priceNameId\": 3,\n        \"name\": \"pružanje usluge u paketu\",\n        \"categoryId\": 3,\n        \"priceAge\": []\n    },\n    {\n        \"priceNameId\": 5,\n        \"name\": \"pružanje usluge u paketu\",\n        \"categoryId\": 5,\n        \"priceAge\": [\n            {\n                \"priceAgeId\": 10,\n                \"name\": \"pruzanje usluga za odrasle\",\n                \"age\": 12,\n                \"amount\": 5555,\n                \"priceNameId\": 5\n            }\n        ]\n    },\n    {\n        \"priceNameId\": 6,\n        \"name\": \"protetika\",\n        \"categoryId\": 6,\n        \"priceAge\": [\n            {\n                \"priceAgeId\": 6,\n                \"name\": \"pružanje usluge za penzionere\",\n                \"age\": 65,\n                \"amount\": 10000,\n                \"priceNameId\": 6\n            },\n            {\n                \"priceAgeId\": 7,\n                \"name\": \"pružanje usluge za decu\",\n                \"age\": 12,\n                \"amount\": 15000,\n                \"priceNameId\": 6\n            }\n        ]\n    },\n    {\n        \"priceNameId\": 7,\n        \"name\": \"fiksna proteza\",\n        \"categoryId\": 6,\n        \"priceAge\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET price-name by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/price-name/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-name",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET patient by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/price-name/1",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-name",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "358"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"166-NXZ1xwVxeYY/bKd9r3owMoiuZ6Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:50:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"priceNameId\": 1,\n    \"name\": \"izdvojeno pružanje usluge\",\n    \"categoryId\": 1,\n    \"priceAge\": [\n        {\n            \"priceAgeId\": 1,\n            \"name\": \"pružanje usluge za decu\",\n            \"age\": 12,\n            \"amount\": 1000,\n            \"priceNameId\": 1\n        },\n        {\n            \"priceAgeId\": 2,\n            \"name\": \"pružanje usluge za penzionere\",\n            \"age\": 65,\n            \"amount\": 1500,\n            \"priceNameId\": 1\n        },\n        {\n            \"priceAgeId\": 3,\n            \"name\": \"pruzanje usluga za odrasle\",\n            \"age\": 0,\n            \"amount\": 2500,\n            \"priceNameId\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "POST add new price-name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"KAtegorija cena\",\r\n    \"categoryId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/price-name/",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-name",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST add new patient",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"KAtegorija cena\",\r\n    \"categoryId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/price-name/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-name",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"47-n3/7ysTxadmiWwHEVhbf2pzIzMc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:52:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"priceNameId\": 8,\n    \"name\": \"KAtegorija cena\",\n    \"categoryId\": 5,\n    \"priceAge\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT edit price-name by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \" cena KAtegorija\",\r\n    \"categoryId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/price-name/8",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-name",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT edit price-name by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \" cena KAtegorija\",\r\n    \"categoryId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/price-name/8",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-name",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-OZ4HkdYlcbP/TlppltICxeVwnDs\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:53:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"priceNameId\": 8,\n    \"name\": \" cena KAtegorija\",\n    \"categoryId\": 5,\n    \"priceAge\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE delete price-name by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"JELISAVETIC\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@gmail.rs\",\r\n    \"age\": 29,\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/price-name/8",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-name",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE delete price-name by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"JELISAVETIC\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@gmail.rs\",\r\n    \"age\": 29,\r\n    \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/price-name/8",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-name",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:54:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{AUTH_ADMINISTRATOR}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Price age",
+			"item": [
+				{
+					"name": "GET all Price age",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/price-age/",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-age",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET all Price age",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/price-age/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-age",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "831"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33f-OAib3oLfpIUGjey1kvepFxU+3MI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:55:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"priceAgeId\": 1,\n        \"name\": \"pružanje usluge za decu\",\n        \"age\": 12,\n        \"amount\": 1000,\n        \"priceNameId\": 1\n    },\n    {\n        \"priceAgeId\": 2,\n        \"name\": \"pružanje usluge za penzionere\",\n        \"age\": 65,\n        \"amount\": 1500,\n        \"priceNameId\": 1\n    },\n    {\n        \"priceAgeId\": 3,\n        \"name\": \"pruzanje usluga za odrasle\",\n        \"age\": 0,\n        \"amount\": 2500,\n        \"priceNameId\": 1\n    },\n    {\n        \"priceAgeId\": 4,\n        \"name\": \"pružanje usluge za decu\",\n        \"age\": 12,\n        \"amount\": 3400,\n        \"priceNameId\": 2\n    },\n    {\n        \"priceAgeId\": 5,\n        \"name\": \"pruzanje usluga za odrasle\",\n        \"age\": 0,\n        \"amount\": 6900,\n        \"priceNameId\": 2\n    },\n    {\n        \"priceAgeId\": 6,\n        \"name\": \"pružanje usluge za penzionere\",\n        \"age\": 65,\n        \"amount\": 10000,\n        \"priceNameId\": 6\n    },\n    {\n        \"priceAgeId\": 7,\n        \"name\": \"pružanje usluge za decu\",\n        \"age\": 12,\n        \"amount\": 15000,\n        \"priceNameId\": 6\n    },\n    {\n        \"priceAgeId\": 8,\n        \"name\": \"pruzanje usluga za odrasle\",\n        \"age\": 0,\n        \"amount\": 3200,\n        \"priceNameId\": 2\n    },\n    {\n        \"priceAgeId\": 10,\n        \"name\": \"pruzanje usluga za odrasle\",\n        \"age\": 12,\n        \"amount\": 5555,\n        \"priceNameId\": 5\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET price-age by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/price-age/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-age",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET price-age by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/price-age/1",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-age",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"59-tbG5bmv2ifPph5G1t1FGdj9Rti4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:56:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"priceAgeId\": 1,\n    \"name\": \"pružanje usluge za decu\",\n    \"age\": 12,\n    \"amount\": 1000,\n    \"priceNameId\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "POST add new price-age",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"pruzanje usluga za odrasle\",\r\n    \"age\": 0,\r\n    \"amount\": 3333,\r\n    \"priceNameId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/price-age/",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-age",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST add new price-age",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"pruzanje usluga za odrasle\",\r\n    \"age\": 0,\r\n    \"amount\": 3333,\r\n    \"priceNameId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/price-age/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-age",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-CNTIN6DotyIfE81hyw1GNR79KAg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:58:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"priceAgeId\": 11,\n    \"name\": \"pruzanje usluga za odrasle\",\n    \"age\": 0,\n    \"amount\": 3333,\n    \"priceNameId\": 5\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT edit price-age by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"pruzanje usluga za odrasle\",\r\n    \"age\": 0,\r\n    \"amount\": 4444,\r\n    \"priceNameId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/price-age/11",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-age",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT edit price-age by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"pruzanje usluga za odrasle\",\r\n    \"age\": 0,\r\n    \"amount\": 4444,\r\n    \"priceNameId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/price-age/11",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-age",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-M3rNO8bDR5W2H/K/SifICQDCNh0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 10:59:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"priceAgeId\": 11,\n    \"name\": \"pruzanje usluga za odrasle\",\n    \"age\": 0,\n    \"amount\": 4444,\n    \"priceNameId\": 5\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE delete price-ageby id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"JELISAVETIC\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@gmail.rs\",\r\n    \"age\": 29,\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/price-age/11",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-age",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE delete price-ageby id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"JELISAVETIC\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@gmail.rs\",\r\n    \"age\": 29,\r\n    \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/price-age/11",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-age",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 11:00:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{AUTH_ADMINISTRATOR}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"item": [
+				{
+					"name": "GET all services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/service/",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"service",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET all services",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/service/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"service",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2406"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"966-hjZ2CuBow4vsKg+ONWy+mJng3WY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 11:02:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"serviceId\": 1,\n        \"name\": \"popravka keca\",\n        \"description\": \"mali karijes\",\n        \"stockNumber\": \"029129212\",\n        \"categoryId\": 1,\n        \"isActive\": 1,\n        \"category\": {\n            \"categoryId\": 1,\n            \"name\": \"preventivna intervencija\",\n            \"description\": \"obicna mala plomba\",\n            \"priceName\": [\n                {\n                    \"priceNameId\": 1,\n                    \"name\": \"izdvojeno pružanje usluge\",\n                    \"categoryId\": 1,\n                    \"priceAge\": [\n                        {\n                            \"priceAgeId\": 1,\n                            \"name\": \"pružanje usluge za decu\",\n                            \"age\": 12,\n                            \"amount\": 1000,\n                            \"priceNameId\": 1\n                        },\n                        {\n                            \"priceAgeId\": 2,\n                            \"name\": \"pružanje usluge za penzionere\",\n                            \"age\": 65,\n                            \"amount\": 1500,\n                            \"priceNameId\": 1\n                        },\n                        {\n                            \"priceAgeId\": 3,\n                            \"name\": \"pruzanje usluga za odrasle\",\n                            \"age\": 0,\n                            \"amount\": 2500,\n                            \"priceNameId\": 1\n                        }\n                    ]\n                }\n            ]\n        }\n    },\n    {\n        \"serviceId\": 2,\n        \"name\": \"popravka cetvorke\",\n        \"description\": \"veliki karijes plus blaga rekonstrukcija\",\n        \"stockNumber\": \"912921021\",\n        \"categoryId\": 2,\n        \"isActive\": 1,\n        \"category\": {\n            \"categoryId\": 2,\n            \"name\": \"redovna intervencija\",\n            \"description\": \"Veca plomba sa rekonstrukcijom\",\n            \"priceName\": [\n                {\n                    \"priceNameId\": 2,\n                    \"name\": \"izdvojeno pružanje usluge\",\n                    \"categoryId\": 2,\n                    \"priceAge\": [\n                        {\n                            \"priceAgeId\": 4,\n                            \"name\": \"pružanje usluge za decu\",\n                            \"age\": 12,\n                            \"amount\": 3400,\n                            \"priceNameId\": 2\n                        },\n                        {\n                            \"priceAgeId\": 5,\n                            \"name\": \"pruzanje usluga za odrasle\",\n                            \"age\": 0,\n                            \"amount\": 6900,\n                            \"priceNameId\": 2\n                        },\n                        {\n                            \"priceAgeId\": 8,\n                            \"name\": \"pruzanje usluga za odrasle\",\n                            \"age\": 0,\n                            \"amount\": 3200,\n                            \"priceNameId\": 2\n                        }\n                    ]\n                }\n            ]\n        }\n    },\n    {\n        \"serviceId\": 3,\n        \"name\": \"rekonstrukcija\",\n        \"description\": \"vadjenje zivca rekonstrukcija zuba plus krunica\",\n        \"stockNumber\": \"992812812\",\n        \"categoryId\": 5,\n        \"isActive\": 1,\n        \"category\": {\n            \"categoryId\": 5,\n            \"name\": \"hirurška intervencija 2\",\n            \"description\": \"dva korena\",\n            \"priceName\": [\n                {\n                    \"priceNameId\": 5,\n                    \"name\": \"pružanje usluge u paketu\",\n                    \"categoryId\": 5,\n                    \"priceAge\": [\n                        {\n                            \"priceAgeId\": 10,\n                            \"name\": \"pruzanje usluga za odrasle\",\n                            \"age\": 12,\n                            \"amount\": 5555,\n                            \"priceNameId\": 5\n                        }\n                    ]\n                }\n            ]\n        }\n    },\n    {\n        \"serviceId\": 5,\n        \"name\": \"dasdasdsasad\",\n        \"description\": \"dasdsadasdasadsasfcv3 f v3f\",\n        \"stockNumber\": \"324321412\",\n        \"categoryId\": 5,\n        \"isActive\": 1,\n        \"category\": {\n            \"categoryId\": 5,\n            \"name\": \"hirurška intervencija 2\",\n            \"description\": \"dva korena\",\n            \"priceName\": [\n                {\n                    \"priceNameId\": 5,\n                    \"name\": \"pružanje usluge u paketu\",\n                    \"categoryId\": 5,\n                    \"priceAge\": [\n                        {\n                            \"priceAgeId\": 10,\n                            \"name\": \"pruzanje usluga za odrasle\",\n                            \"age\": 12,\n                            \"amount\": 5555,\n                            \"priceNameId\": 5\n                        }\n                    ]\n                }\n            ]\n        }\n    },\n    {\n        \"serviceId\": 6,\n        \"name\": \"vadjenje osmice\",\n        \"description\": \"hirursko vadjenje osmice iz vilice cekicem\",\n        \"stockNumber\": \"666666666\",\n        \"categoryId\": 3,\n        \"isActive\": 1,\n        \"category\": {\n            \"categoryId\": 3,\n            \"name\": \"hirurška intervencija\",\n            \"description\": \"jedan koren\",\n            \"priceName\": [\n                {\n                    \"priceNameId\": 3,\n                    \"name\": \"pružanje usluge u paketu\",\n                    \"categoryId\": 3,\n                    \"priceAge\": []\n                }\n            ]\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET service by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/price-age/1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"price-age",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET service by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL_API}}/price-age/1",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"price-age",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"59-tbG5bmv2ifPph5G1t1FGdj9Rti4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 11:02:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"priceAgeId\": 1,\n    \"name\": \"pružanje usluge za decu\",\n    \"age\": 12,\n    \"amount\": 1000,\n    \"priceNameId\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "POST add new service",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"servis otklanjanja kamenca \",\r\n    \"description\": \"servis otklanjanja kamenca vodenim topom\",\r\n    \"stockNumber\": \"333333333\",\r\n    \"categoryId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/service/",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"service",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST add new service",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"servis otklanjanja kamenca \",\r\n    \"description\": \"servis otklanjanja kamenca vodenim topom\",\r\n    \"stockNumber\": \"333333333\",\r\n    \"categoryId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/service/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"service",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "440"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b8-+65xuPnn4ym0OtDH4stdkUn+fWE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 11:04:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"serviceId\": 7,\n    \"name\": \"servis otklanjanja kamenca \",\n    \"description\": \"servis otklanjanja kamenca vodenim topom\",\n    \"stockNumber\": \"333333333\",\n    \"categoryId\": 5,\n    \"isActive\": 1,\n    \"category\": {\n        \"categoryId\": 5,\n        \"name\": \"hirurška intervencija 2\",\n        \"description\": \"dva korena\",\n        \"priceName\": [\n            {\n                \"priceNameId\": 5,\n                \"name\": \"pružanje usluge u paketu\",\n                \"categoryId\": 5,\n                \"priceAge\": [\n                    {\n                        \"priceAgeId\": 10,\n                        \"name\": \"pruzanje usluga za odrasle\",\n                        \"age\": 12,\n                        \"amount\": 5555,\n                        \"priceNameId\": 5\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT edit service by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"servis otklanjanja kamenca sa gornjih zuba\",\r\n    \"description\": \"servis otklanjanja kamenca sa gornjih zuba vodenim topom\",\r\n    \"stockNumber\": \"33333444\",\r\n    \"categoryId\": 5,\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/service/7",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"service",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT edit service by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"servis otklanjanja kamenca sa gornjih zuba\",\r\n    \"description\": \"servis otklanjanja kamenca sa gornjih zuba vodenim topom\",\r\n    \"stockNumber\": \"33333444\",\r\n    \"categoryId\": 5,\r\n    \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/service/7",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"service",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "470"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d6-GhxGtuwa2aBgGjRpv6q6aqXEntA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 11:06:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"serviceId\": 7,\n    \"name\": \"servis otklanjanja kamenca sa gornjih zuba\",\n    \"description\": \"servis otklanjanja kamenca sa gornjih zuba vodenim topom\",\n    \"stockNumber\": \"33333444\",\n    \"categoryId\": 5,\n    \"isActive\": 1,\n    \"category\": {\n        \"categoryId\": 5,\n        \"name\": \"hirurška intervencija 2\",\n        \"description\": \"dva korena\",\n        \"priceName\": [\n            {\n                \"priceNameId\": 5,\n                \"name\": \"pružanje usluge u paketu\",\n                \"categoryId\": 5,\n                \"priceAge\": [\n                    {\n                        \"priceAgeId\": 10,\n                        \"name\": \"pruzanje usluga za odrasle\",\n                        \"age\": 12,\n                        \"amount\": 5555,\n                        \"priceNameId\": 5\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE delete service by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"JELISAVETIC\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@gmail.rs\",\r\n    \"age\": 29,\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/service/7",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"service",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE delete service by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Jelena\",\r\n    \"lastName\": \"JELISAVETIC\",\r\n    \"jmbg\": \"0203998721605\",\r\n    \"email\": \"jelena@gmail.rs\",\r\n    \"age\": 29,\r\n    \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/service/7",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"service",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Aug 2021 11:07:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{AUTH_ADMINISTRATOR}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_API",
+			"value": "localhost:40080"
+		},
+		{
+			"key": "AUTH_ADMINISTRATOR",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWRlbnRpdHkiOiJNYXJpamEiLCJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlhdCI6MTYzMDQwNDAyMCwiZXhwIjoxNjMxMDA4ODIwLCJpc3MiOiJsb2NhbGhvc3QifQ.K6c8uKeP9pYhUN6CSeIpBymQQavv5g-Bv96TaYd9yNXRl5lYIbVozjPpzFNSLYj6TG3NHvqFbQYdZPFmDwo2IMvFxg3ZhvNqYh8jkr_yqlpphD3wZWfFSjc_sJibGsqvxTcbq7n8MSBe63V8N_BrHtf5PUG1xFfoofiwPiN49-8mn31r28hCTqZYCOr7upOrRT6YM827pjc9Y1WyUfBuqLtQHGmeisamty6V7dFPdFGBKia3Pp0ZexbdXl5iUL9ImSfzhfR_Lzc1uoVwIil_HvJkUphgj4VMW-ZwdIjuKjm5Wc_3mQi_BVYkG7zUNINe4dWz4zk_g9R7k3lN5faNJg"
+		}
+	]
+}

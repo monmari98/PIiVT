@@ -22,7 +22,7 @@ const Config: IConfig = {
     database: {
         host: "localhost",
         user: "root",
-        password: "root",
+        password: "monmari",
         database: "zubarska_ordinacija",
         port: 3306,
         charset: "utf8",
